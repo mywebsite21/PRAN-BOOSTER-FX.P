@@ -1,69 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forex Trading</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation & Theme Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .nav-link {
+      cursor: pointer;
+      padding: 10px;
+      margin: 5px;
+      background-color: #f0f0f0;
+      border: none;
+      border-radius: 5px;
+    }
+
+    #colorTheme {
+      margin: 20px 0;
+      padding: 10px;
+    }
+  </style>
 </head>
 <body>
-    <!-- Site Name -->
-    <header>
-        <h1>ফরেক্স ট্রেডিং</h1>
-        
-        <!-- Dark/Light Mode Toggle Switch -->
-        <div class="mode-toggle">
-            <label for="modeSwitch">Dark Mode</label>
-            <input type="checkbox" id="modeSwitch" class="mode-switch">
-        </div>
-    </header>
+  <div>
+    <select id="colorTheme">
+      <option value="black">Black Theme</option>
+      <option value="white">White Theme</option>
+      <option value="blue">Blue Theme</option>
+      <option value="green">Green Theme</option>
+    </select>
+  </div>
 
-    <!-- Show/Hide Button (Tick Checkbox) -->
-    <div class="toggle-container">
-        <label for="toggleMenu" class="toggle-label">Hide/Show Menu</label>
-        <input type="checkbox" id="toggleMenu" class="toggle-checkbox">
-    </div>
+  <nav>
+    <button class="nav-link" data-target="home">Home</button>
+    <button class="nav-link" data-target="about">About</button>
+    <button class="nav-link" data-target="contact">Contact</button>
+  </nav>
 
-    <!-- Navigation Menu -->
-    <nav>
-        <ul id="navMenu">
-            <li><a href="#home" class="nav-link">Home</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#support" class="nav-link">Support</a></li>
-            <li><a href="#offer" class="nav-link">Offer</a></li>
-            <li><a href="#work" class="nav-link">Work</a></li>
-        </ul>
-    </nav>
+  <section id="home" class="section">
+    <h1>Home Section</h1>
+    <p>This is the home section.</p>
+  </section>
 
-    <!-- Home Section with Offer Animation -->
-    <section id="home" class="section">
-        <h2>Welcome to Forex Trading</h2>
-        <p>Your gateway to the world of financial trading.</p>
-        <div class="offer" id="offer">
-            <h2>Exclusive Offer: Get Started with Free Demo</h2>
-        </div>
-    </section>
+  <section id="about" class="section hidden">
+    <h1>About Section</h1>
+    <p>This is the about section.</p>
+  </section>
 
-    <!-- Other Sections -->
-    <section id="about" class="section">
-        <h2>About Us</h2>
-        <p>We are a leading platform for Forex trading, offering an array of tools and features for every level of trader.</p>
-    </section>
+  <section id="contact" class="section hidden">
+    <h1>Contact Section</h1>
+    <p>This is the contact section.</p>
+  </section>
 
-    <section id="support" class="section">
-        <h2>Support</h2>
-        <p>If you need help, our team is available 24/7. Reach out to us through email or live chat.</p>
-    </section>
-
-    <section id="work" class="section">
-        <h2>How It Works</h2>
-        <p>Forex trading involves buying and selling currencies, and with our platform, you can easily navigate the market.</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Forex Trading. All Rights Reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
