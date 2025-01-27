@@ -1,174 +1,82 @@
-/* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fff; /* Default light mode */
-    color: #000; /* Default light mode text color */
-    line-height: 1.6;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-header {
-    background-color: #222;
-    padding: 20px;
-    text-align: center;
-    color: white;
+h1, p {
+  margin: 0;
+  padding: 10px;
 }
 
-h1 {
-    font-size: 36px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* Navigation Menu Styles */
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 20px 0;
-}
-
-nav ul li {
-    margin: 0 15px;
+/* Navigation Bar Styles */
+nav {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
 }
 
 .nav-link {
-    text-decoration: none;
-    color: #fdd835; /* Yellow color */
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 30px;
-    background-color: #333;
-    transition: all 0.3s ease;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  color: #333;
+  cursor: pointer;
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
 }
 
 .nav-link:hover {
-    background-color: #fdd835;
-    color: #333;
-    transform: scale(1.1);
+  background-color: #ccc;
 }
 
-/* Show/Hide Menu Toggle */
-.toggle-container {
-    display: flex;
-    justify-content: flex-start;
-    padding: 20px;
-    margin-top: 20px;
+/* Section Styles */
+section {
+  padding: 20px;
+  margin: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.toggle-checkbox {
-    margin-left: 10px;
+.hidden {
+  display: none;
 }
 
-.toggle-label {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
+/* Color Theme Dropdown Styles */
+#colorTheme {
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  font-size: 16px;
 }
 
-#navMenu {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    transition: opacity 0.5s ease;
+select, option {
+  padding: 10px;
+  font-size: 16px;
 }
 
-#navMenu.hidden {
-    opacity: 0;
-    visibility: hidden;
+/* Additional Styling */
+body.black {
+  background-color: black;
+  color: white;
 }
 
-.section {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #f4f4f4;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+body.white {
+  background-color: white;
+  color: black;
 }
 
-h2 {
-    margin-bottom: 20px;
+body.blue {
+  background-color: #001f3f;
+  color: white;
 }
 
-/* Dark Mode Styles */
-body.dark-mode {
-    background-color: #000;
-    color: #fff;
-}
-
-header.dark-mode {
-    background-color: #333;
-}
-
-.nav-link.dark-mode {
-    color: #fff;
-    background-color: #333;
-}
-
-.nav-link:hover.dark-mode {
-    background-color: #fdd835;
-    color: #333;
-}
-
-.section.dark-mode {
-    background-color: #444;
-}
-
-/* Mode Toggle Styles */
-.mode-toggle {
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
-}
-
-.mode-switch {
-    margin-left: 10px;
-}
-
-/* Offer Animation */
-.offer {
-    padding: 20px;
-    background-color: #ff9800;
-    color: #fff;
-    font-size: 20px;
-    text-align: center;
-    animation: offerAnimation 5s infinite alternate;
-}
-
-@keyframes offerAnimation {
-    0% {
-        opacity: 0.5;
-        transform: scale(0.8);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.1);
-    }
-    100% {
-        opacity: 0.5;
-        transform: scale(0.8);
-    }
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .section {
-        padding: 30px 10px;
-    }
+body.green {
+  background-color: #004d00;
+  color: white;
 }
